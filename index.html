@@ -281,45 +281,72 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
 }
 
 .cover-rule-top, .cover-rule-bottom {
-  width: 60%; height: 1px;
-  background: linear-gradient(to right, transparent, var(--accent-light), transparent);
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 0;
 }
-.cover-rule-top { margin-bottom: 1.8rem; }
-.cover-rule-bottom { margin-top: 1.8rem; }
+.cover-rule-top::before, .cover-rule-top::after,
+.cover-rule-bottom::before, .cover-rule-bottom::after {
+  content: '';
+  flex: 1;
+  height: 0;
+  border-top: 1px solid rgba(139, 94, 60, 0.25);
+  border-bottom: 1px solid rgba(139, 94, 60, 0.12);
+}
+.cover-rule-top { margin-bottom: 1.6rem; }
+.cover-rule-bottom { margin-top: 1.6rem; }
+/* compass ornament between rules */
+.cover-ornament {
+  width: 32px; height: 32px;
+  flex-shrink: 0;
+  margin: 0 .6rem;
+  opacity: 0.5;
+}
+.cover-ornament svg { width: 100%; height: 100%; }
 
 .cover-eyebrow {
   font-family: var(--sans);
-  font-size: .62rem; font-weight: 500;
-  letter-spacing: .3em; text-transform: uppercase;
+  font-size: .58rem; font-weight: 500;
+  letter-spacing: .35em; text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 1rem;
+  margin-bottom: .6rem;
 }
 .cover-title-the {
   font-family: var(--serif);
-  font-size: 1.2rem; font-weight: 400;
-  color: var(--text-muted);
-  letter-spacing: .18em; text-transform: uppercase;
+  font-size: .9rem; font-weight: 400;
+  color: var(--text-dim);
+  letter-spacing: .35em; text-transform: uppercase;
+  margin-bottom: -.15rem;
 }
 .cover-title-main {
   font-family: var(--serif);
-  font-size: 3rem; font-weight: 700; font-style: italic;
+  font-size: 3.4rem; font-weight: 800; font-style: italic;
   color: var(--accent);
-  line-height: 1.1; margin-bottom: .8rem;
+  line-height: 1; margin-bottom: .6rem;
+  letter-spacing: -.02em;
 }
 .cover-subtitle {
   font-family: var(--serif);
-  font-size: .75rem;
-  color: var(--text-muted);
-  letter-spacing: .04em;
-  line-height: 1.6;
-  max-width: 220px;
+  font-size: .82rem;
+  color: var(--text-body);
+  letter-spacing: .02em;
+  line-height: 1.5;
+  max-width: 230px;
+}
+.cover-subtitle .hook {
+  display: block;
+  color: var(--accent);
+  font-weight: 600;
+  font-style: italic;
+  margin-top: .15rem;
 }
 .cover-author {
   font-family: var(--sans);
-  font-size: .72rem; font-weight: 500;
-  letter-spacing: .18em; text-transform: uppercase;
+  font-size: .65rem; font-weight: 500;
+  letter-spacing: .22em; text-transform: uppercase;
   color: var(--text-muted);
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
 }
 
 .book-spine {
@@ -329,6 +356,23 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
   border: 1px solid rgba(139, 94, 60, 0.12);
   display: flex; align-items: center; justify-content: center;
   box-shadow: -2px 0 10px rgba(44, 37, 34, 0.1);
+  overflow: hidden;
+}
+.book-spine::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  width: 4px;
+  background: var(--accent);
+  opacity: 0.6;
+}
+.book-spine::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; right: 0;
+  width: 4px;
+  background: var(--accent);
+  opacity: 0.6;
 }
 .spine-text {
   font-family: var(--serif);
@@ -378,12 +422,20 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
 }
 .back-blurb {
   font-family: var(--serif);
-  font-size: .82rem; font-style: italic;
+  font-size: .78rem; font-style: italic;
   line-height: 1.7;
   color: var(--text-body);
-  margin-bottom: 1.4rem;
-  border-left: 2px solid var(--accent-light);
+  margin-bottom: 1.2rem;
+  border-left: 2px solid var(--accent);
   padding-left: .9rem;
+}
+.back-blurb-source {
+  font-family: var(--sans);
+  font-size: .55rem; font-weight: 500;
+  letter-spacing: .1em;
+  color: var(--text-dim);
+  margin-top: .4rem;
+  font-style: normal;
 }
 .back-list {
   list-style: none; padding: 0; margin: 0 0 1.4rem 0;
@@ -733,7 +785,7 @@ footer {
     text-align: center;
   }
   .book-scene { width: 260px; height: 370px; }
-  .cover-title-main { font-size: 2.2rem; }
+  .cover-title-main { font-size: 2.6rem; }
   .book-pages-right { transform: rotateY(90deg) translateZ(242px) translateX(18px); }
   nav { padding: 1rem 1.5rem; }
   .nav-links { gap: 1rem; }
@@ -766,18 +818,22 @@ footer {
       <div class="book-wrapper">
         <div class="book-front">
           <div class="cover-eyebrow">A Field Guide</div>
-          <div class="cover-rule-top"></div>
+          <div class="cover-rule-top">
+            <div class="cover-ornament"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#8B5E3C" stroke-width="0.8"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="3"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="16" y1="26" x2="16" y2="30"/><line x1="2" y1="16" x2="6" y2="16"/><line x1="26" y1="16" x2="30" y2="16"/><line x1="16" y1="6" x2="14" y2="10"/><line x1="16" y1="6" x2="18" y2="10"/></svg></div>
+          </div>
           <div class="cover-title-the">THE</div>
           <div class="cover-title-main">Coordinator</div>
-          <div class="cover-subtitle">A Field Guide to Clinical Research<br>That Nobody Gives You</div>
-          <div class="cover-rule-bottom"></div>
+          <div class="cover-subtitle">A Field Guide to Clinical Research<span class="hook">That Nobody Gives You</span></div>
+          <div class="cover-rule-bottom">
+            <div class="cover-ornament"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#8B5E3C" stroke-width="0.8"><rect x="8" y="8" width="16" height="16" rx="1"/><line x1="12" y1="13" x2="20" y2="13"/><line x1="12" y1="16" x2="20" y2="16"/><line x1="12" y1="19" x2="17" y2="19"/></svg></div>
+          </div>
           <div class="cover-author">Ish M.A</div>
         </div>
         <div class="book-spine"><div class="spine-text">The Coordinator &bull; Ish M.A</div></div>
         <div class="book-back">
           <div class="back-content">
             <div class="back-eyebrow">What's Inside</div>
-            <div class="back-blurb">&ldquo;The CRC is the most important and least trained person in clinical research. This book fixes that.&rdquo;</div>
+            <div class="back-blurb">&ldquo;I wish someone had handed me this book on my first day. It would have saved me a year of mistakes.&rdquo;<div class="back-blurb-source">&mdash; The book every new CRC deserves</div></div>
             <ul class="back-list">
               <li>12 hard-won principles from the trenches</li>
               <li>Protocol mastery, recruitment psychology &amp; data integrity</li>
@@ -867,18 +923,22 @@ footer {
       <div class="book-wrapper">
         <div class="book-front">
           <div class="cover-eyebrow">A Field Guide</div>
-          <div class="cover-rule-top"></div>
+          <div class="cover-rule-top">
+            <div class="cover-ornament"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#8B5E3C" stroke-width="0.8"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="3"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="16" y1="26" x2="16" y2="30"/><line x1="2" y1="16" x2="6" y2="16"/><line x1="26" y1="16" x2="30" y2="16"/><line x1="16" y1="6" x2="14" y2="10"/><line x1="16" y1="6" x2="18" y2="10"/></svg></div>
+          </div>
           <div class="cover-title-the">THE</div>
           <div class="cover-title-main">Coordinator</div>
-          <div class="cover-subtitle">A Field Guide to Clinical Research<br>That Nobody Gives You</div>
-          <div class="cover-rule-bottom"></div>
+          <div class="cover-subtitle">A Field Guide to Clinical Research<span class="hook">That Nobody Gives You</span></div>
+          <div class="cover-rule-bottom">
+            <div class="cover-ornament"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#8B5E3C" stroke-width="0.8"><rect x="8" y="8" width="16" height="16" rx="1"/><line x1="12" y1="13" x2="20" y2="13"/><line x1="12" y1="16" x2="20" y2="16"/><line x1="12" y1="19" x2="17" y2="19"/></svg></div>
+          </div>
           <div class="cover-author">Ish M.A</div>
         </div>
         <div class="book-spine"><div class="spine-text">The Coordinator &bull; Ish M.A</div></div>
         <div class="book-back">
           <div class="back-content">
             <div class="back-eyebrow">What's Inside</div>
-            <div class="back-blurb">&ldquo;The CRC is the most important and least trained person in clinical research. This book fixes that.&rdquo;</div>
+            <div class="back-blurb">&ldquo;I wish someone had handed me this book on my first day. It would have saved me a year of mistakes.&rdquo;<div class="back-blurb-source">&mdash; The book every new CRC deserves</div></div>
             <ul class="back-list">
               <li>12 hard-won principles from the trenches</li>
               <li>Protocol mastery, recruitment psychology &amp; data integrity</li>

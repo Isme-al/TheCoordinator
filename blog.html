@@ -4,16 +4,241 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog | The Coordinator — Clinical Research Coordinator Insights</title>
 <meta name="description" content="Practical advice for clinical research coordinators. CRC tips, recruitment strategies, certification guides, and career advice from someone who's done the work.">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>:root{--bg:#0a0a0a;--bg-card:#161616;--text:#e8e4df;--text-muted:#8a8580;--text-dim:#5a5550;--accent:#c9a96e;--accent-bright:#dfc08a;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',sans-serif;--border:rgba(201,169,110,.12)}*{margin:0;padding:0;box-sizing:border-box}body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased}::selection{background:var(--accent);color:var(--bg)}nav{position:sticky;top:0;z-index:100;padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(20px);background:rgba(10,10,10,.9);border-bottom:1px solid var(--border)}.nav-logo{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;text-decoration:none}.nav-cta{font-family:var(--sans);font-size:.8rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--bg);background:var(--accent);padding:.7rem 1.8rem;text-decoration:none;transition:all .3s}.nav-cta:hover{background:var(--accent-bright)}.page-header{text-align:center;padding:5rem 2rem 3rem}.page-eyebrow{font-family:var(--sans);font-size:.75rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}.page-title{font-family:var(--serif);font-size:clamp(2.5rem,5vw,3.5rem);font-weight:700}.blog-grid{max-width:900px;margin:0 auto;padding:0 2rem 6rem;display:grid;gap:2rem}.blog-card{display:block;background:var(--bg-card);border:1px solid var(--border);padding:2.5rem;text-decoration:none;transition:all .4s}.blog-card:hover{border-color:var(--accent);transform:translateY(-2px)}.blog-card-eyebrow{font-family:var(--sans);font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem}.blog-card-title{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--text);margin-bottom:.8rem;line-height:1.3}.blog-card-desc{font-size:.9rem;color:var(--text-muted);line-height:1.7}.blog-card-meta{font-size:.8rem;color:var(--text-dim);margin-top:1rem}footer{padding:3rem 2rem;text-align:center;border-top:1px solid var(--border)}.footer-links{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:1rem}.footer-links a{font-size:.8rem;color:var(--text-dim);text-decoration:none;transition:color .3s}.footer-links a:hover{color:var(--accent)}.footer-copy{font-size:.75rem;color:var(--text-dim)}@media(max-width:768px){nav{padding:1rem 1.5rem}}</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FAF7F2;
+  --bg-warm: #F3EDE4;
+  --bg-card: #FFFFFF;
+  --text: #2C2522;
+  --text-body: #4A4340;
+  --text-muted: #7A7270;
+  --text-dim: #A8A2A0;
+  --accent: #8B5E3C;
+  --accent-hover: #6F4A2E;
+  --accent-light: #C9A87C;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+  --border: rgba(44, 37, 34, 0.08);
+  --border-strong: rgba(44, 37, 34, 0.14);
+  --shadow-sm: 0 1px 3px rgba(44, 37, 34, 0.06);
+  --shadow-md: 0 4px 20px rgba(44, 37, 34, 0.08);
+  --radius: 3px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+::selection { background: var(--accent-light); color: var(--text); }
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1.25rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(16px);
+  background: rgba(250, 247, 242, 0.85);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-link {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  transition: color .3s;
+}
+.nav-link:hover { color: var(--accent); }
+.nav-cta {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--accent);
+  padding: 0.6rem 1.6rem;
+  text-decoration: none;
+  transition: all .3s;
+  border-radius: var(--radius);
+}
+.nav-cta:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+
+.page-header {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+}
+.page-eyebrow {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.page-title {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.blog-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem 6rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.blog-card {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  text-decoration: none;
+  transition: all .4s;
+  box-shadow: var(--shadow-sm);
+}
+.blog-card:hover {
+  border-color: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.blog-card-eyebrow {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+.blog-card-title {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+.blog-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+.blog-card-meta {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-top: 1rem;
+}
+
+footer {
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.footer-links a {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color .3s;
+}
+.footer-links a:hover { color: var(--accent); }
+.footer-logo {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+.footer-copy { font-size: 0.75rem; color: var(--text-dim); }
+
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { gap: 1rem; }
+}
+</style>
 </head>
 <body>
-<nav><a href="index.html" class="nav-logo">The Coordinator</a><a href="index.html#buy" class="nav-cta">Get the Book</a></nav>
-<div class="page-header"><div class="page-eyebrow">From the Trenches</div><h1 class="page-title">Blog</h1></div>
-<div class="blog-grid">
-<a href="blog/new-crc-mistakes.html" class="blog-card"><div class="blog-card-eyebrow">CRC Career Advice</div><div class="blog-card-title">7 Mistakes Every New Clinical Research Coordinator Makes (And How to Avoid Them)</div><div class="blog-card-desc">Starting your first CRC role? Here are the seven most common mistakes and practical fixes that will save your career.</div><div class="blog-card-meta">8 min read</div></a>
-<a href="blog/crc-patient-recruitment-strategies.html" class="blog-card"><div class="blog-card-eyebrow">Patient Recruitment</div><div class="blog-card-title">Clinical Trial Patient Recruitment: The CRC&rsquo;s Guide to Enrollment That Actually Works</div><div class="blog-card-desc">Patient archetypes, physician outreach scripts, screening frameworks, and the psychology of enrollment.</div><div class="blog-card-meta">10 min read</div></a>
-<a href="blog/acrp-cp-certification-guide.html" class="blog-card"><div class="blog-card-eyebrow">Certification &amp; Career</div><div class="blog-card-title">ACRP-CP Certification: Is It Worth It? A CRC&rsquo;s Honest Guide (2026)</div><div class="blog-card-desc">The real impact on salary, job offers, and career trajectory &mdash; plus study tips and exam prep resources.</div><div class="blog-card-meta">9 min read</div></a>
+
+<nav>
+  <a href="index.html" class="nav-logo">The Coordinator</a>
+  <div class="nav-links">
+    <a href="about.html" class="nav-link">About</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="https://buy.stripe.com/bJe4gz20yfJH5WR9pU4ZG0a" class="nav-cta">Get the Book</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-eyebrow">From the Trenches</div>
+  <h1 class="page-title">Blog</h1>
 </div>
-<footer><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div><div class="footer-copy">&copy; 2026 Ish. All rights reserved.</div></footer>
-</body></html>
+
+<div class="blog-grid">
+  <a href="blog/new-crc-mistakes.html" class="blog-card">
+    <div class="blog-card-eyebrow">CRC Career Advice</div>
+    <div class="blog-card-title">7 Mistakes Every New Clinical Research Coordinator Makes (And How to Avoid Them)</div>
+    <div class="blog-card-desc">Starting your first CRC role? Here are the seven most common mistakes and practical fixes that will save your career.</div>
+    <div class="blog-card-meta">8 min read</div>
+  </a>
+  <a href="blog/crc-patient-recruitment-strategies.html" class="blog-card">
+    <div class="blog-card-eyebrow">Patient Recruitment</div>
+    <div class="blog-card-title">Clinical Trial Patient Recruitment: The CRC&rsquo;s Guide to Enrollment That Actually Works</div>
+    <div class="blog-card-desc">Patient archetypes, physician outreach scripts, screening frameworks, and the psychology of enrollment.</div>
+    <div class="blog-card-meta">10 min read</div>
+  </a>
+  <a href="blog/acrp-cp-certification-guide.html" class="blog-card">
+    <div class="blog-card-eyebrow">Certification &amp; Career</div>
+    <div class="blog-card-title">ACRP-CP Certification: Is It Worth It? A CRC&rsquo;s Honest Guide (2026)</div>
+    <div class="blog-card-desc">The real impact on salary, job offers, and career trajectory &mdash; plus study tips and exam prep resources.</div>
+    <div class="blog-card-meta">9 min read</div>
+  </a>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </div>
+  <div class="footer-logo">The Coordinator</div>
+  <div class="footer-copy">&copy; 2026 Ish M.A. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

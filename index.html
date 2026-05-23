@@ -3,36 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Coordinator — A Field Guide to Clinical Research That Nobody Gives You</title>
-<meta name="description" content="The field guide for clinical research coordinators. 12 principles for surviving and thriving in your CRC career, from someone who learned them the hard way.">
-<meta name="keywords" content="clinical research coordinator book, CRC guide, clinical research coordinator tips, clinical trial coordinator training, CRC career advice">
-<meta property="og:title" content="The Coordinator — A Field Guide to Clinical Research">
-<meta property="og:description" content="12 principles for CRCs. The training that should exist but doesn't.">
+<title>The Coordinator — Notes from the Bottom of the Trial</title>
+<meta name="description" content="A literary essay collection on clinical research coordination. Forty-two essays from inside the trial, written for the new coordinator who was handed a binder and told good luck.">
+<meta name="keywords" content="clinical research coordinator, CRC, clinical trials, literary essays, the coordinator, notes from the bottom of the trial">
+<meta property="og:title" content="The Coordinator — Notes from the Bottom of the Trial">
+<meta property="og:description" content="Forty-two essays from inside the trial. The book is what someone wrote after.">
 <link rel="canonical" href="https://thecoordinatorbook.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #FAF7F2;
-  --bg-warm: #F3EDE4;
-  --bg-card: #FFFFFF;
-  --bg-card-hover: #FBF9F6;
-  --text: #2C2522;
-  --text-body: #4A4340;
-  --text-muted: #7A7270;
-  --text-dim: #A8A2A0;
-  --accent: #8B5E3C;
-  --accent-hover: #6F4A2E;
-  --accent-light: #C9A87C;
-  --accent-bg: rgba(139, 94, 60, 0.06);
-  --accent-bg-strong: rgba(139, 94, 60, 0.10);
-  --serif: 'Playfair Display', Georgia, serif;
+  /* Palette pulled from the book cover */
+  --bg: #f1ead7;             /* paper / cover field */
+  --bg-warm: #ece4cf;        /* a touch darker */
+  --bg-card: #f7f1e0;
+  --bg-card-hover: #fbf6ea;
+  --text: #1a1410;           /* ink */
+  --text-body: #2a2418;
+  --text-muted: #5a4e3a;
+  --text-dim: #8a7e6a;
+  --accent: #7a1a1a;         /* the stamp - oxblood */
+  --accent-hover: #5a1010;
+  --accent-light: #b85a5a;
+  --accent-bg: rgba(122, 26, 26, 0.06);
+  --rule: #1a1410;
+  --serif: 'EB Garamond', Garamond, Georgia, serif;
   --sans: 'DM Sans', -apple-system, sans-serif;
-  --border: rgba(44, 37, 34, 0.08);
-  --border-strong: rgba(44, 37, 34, 0.14);
-  --shadow-sm: 0 1px 3px rgba(44, 37, 34, 0.06);
-  --shadow-md: 0 4px 20px rgba(44, 37, 34, 0.08);
-  --shadow-lg: 0 12px 48px rgba(44, 37, 34, 0.10);
-  --radius: 3px;
+  --mono: 'JetBrains Mono', 'Courier New', monospace;
+  --border: rgba(26, 20, 16, 0.10);
+  --border-strong: rgba(26, 20, 16, 0.16);
+  --shadow-sm: 0 1px 3px rgba(26, 20, 16, 0.06);
+  --shadow-md: 0 4px 20px rgba(26, 20, 16, 0.08);
+  --shadow-lg: 0 12px 48px rgba(26, 20, 16, 0.10);
+  --radius: 2px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -49,7 +51,7 @@ body {
   font-size: 16px;
 }
 
-::selection { background: var(--accent-light); color: var(--text); }
+::selection { background: var(--accent-light); color: var(--bg); }
 
 /* ── NAV ── */
 nav {
@@ -62,7 +64,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(16px);
-  background: rgba(250, 247, 242, 0.85);
+  background: rgba(241, 234, 215, 0.88);
   border-bottom: 1px solid var(--border);
   transition: all .4s;
 }
@@ -72,10 +74,11 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
   font-family: var(--serif);
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--accent);
-  letter-spacing: 0.06em;
+  color: var(--text);
+  letter-spacing: 0.04em;
   text-decoration: none;
 }
+.nav-logo .nav-section { color: var(--accent); margin-right: .3rem; font-weight: 500; }
 
 .nav-links { display: flex; gap: 2rem; align-items: center; }
 
@@ -91,14 +94,14 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
 .nav-link:hover { color: var(--accent); }
 
 .nav-cta {
-  font-family: var(--sans);
-  font-size: 0.78rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--bg);
   background: var(--accent);
-  padding: 0.6rem 1.6rem;
+  padding: 0.65rem 1.6rem;
   border: none;
   cursor: pointer;
   transition: all .3s;
@@ -124,18 +127,18 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
   top: 0; left: 0; right: 0;
   height: 100%;
   background:
-    radial-gradient(ellipse at 70% 30%, rgba(201, 168, 124, 0.08), transparent 60%),
-    radial-gradient(ellipse at 30% 70%, rgba(139, 94, 60, 0.04), transparent 50%);
+    radial-gradient(ellipse at 70% 30%, rgba(122, 26, 26, 0.05), transparent 60%),
+    radial-gradient(ellipse at 30% 70%, rgba(90, 78, 58, 0.04), transparent 50%);
   pointer-events: none;
 }
 
-.hero-content { max-width: 520px; position: relative; z-index: 1; }
+.hero-content { max-width: 540px; position: relative; z-index: 1; }
 
 .hero-eyebrow {
-  font-family: var(--sans);
+  font-family: var(--mono);
   font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 1.8rem;
@@ -146,29 +149,38 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
 .hero-title {
   font-family: var(--serif);
   font-size: clamp(3rem, 6vw, 5.2rem);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.05;
   color: var(--text);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
   opacity: 0;
   animation: fadeUp .8s ease .4s forwards;
+  letter-spacing: -0.01em;
 }
-.hero-title em { font-style: italic; color: var(--accent); }
+
+.hero-rule {
+  width: 60px;
+  height: 1px;
+  background: var(--text);
+  margin-bottom: 1.4rem;
+  opacity: 0;
+  animation: fadeUp .8s ease .5s forwards;
+}
 
 .hero-subtitle {
   font-family: var(--serif);
-  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
   font-style: italic;
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
+  color: var(--text-body);
+  margin-bottom: 1.6rem;
   opacity: 0;
   animation: fadeUp .8s ease .6s forwards;
 }
 
 .hero-author {
-  font-family: var(--sans);
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-dim);
   margin-bottom: 2.5rem;
@@ -178,14 +190,14 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
 
 .hero-cta {
   display: inline-block;
-  font-family: var(--sans);
-  font-size: 0.82rem;
+  font-family: var(--mono);
+  font-size: 0.74rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--bg);
   background: var(--accent);
-  padding: 1rem 2.8rem;
+  padding: 1rem 2.6rem;
   text-decoration: none;
   transition: all .4s;
   opacity: 0;
@@ -195,7 +207,7 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
 .hero-cta:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(139, 94, 60, 0.18);
+  box-shadow: 0 12px 40px rgba(122, 26, 26, 0.22);
 }
 
 .hero-book { opacity: 0; animation: fadeUp 1s ease .5s forwards; position: relative; z-index: 1; }
@@ -210,8 +222,9 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
   align-items: center;
   gap: .5rem;
   color: var(--text-dim);
-  font-size: .68rem;
-  letter-spacing: .18em;
+  font-family: var(--mono);
+  font-size: .65rem;
+  letter-spacing: .2em;
   text-transform: uppercase;
   opacity: 0;
   animation: fadeUp .8s ease 1.2s forwards;
@@ -219,7 +232,7 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
 .hero-scroll-line {
   width: 1px;
   height: 36px;
-  background: linear-gradient(to bottom, var(--accent-light), transparent);
+  background: linear-gradient(to bottom, var(--accent), transparent);
   animation: scrollPulse 2s ease infinite;
 }
 
@@ -249,113 +262,198 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
   transform: rotateY(168deg) rotateX(2deg) scale(1.03);
 }
 
+/* Front cover — echoes the actual book cover (form 1572-A look) */
 .book-front {
   position: absolute; width: 100%; height: 100%;
   backface-visibility: hidden;
   transform: translateZ(18px);
-  background: linear-gradient(165deg, #FAF7F2, #F0EAE0 40%, #E8E0D4);
-  border: 1px solid rgba(139, 94, 60, 0.18);
+  background: linear-gradient(165deg, #f4ecd6, #ede4cd 50%, #e6dcc1);
+  border: 1px solid rgba(26, 20, 16, 0.18);
   border-radius: 2px 8px 8px 2px;
   overflow: hidden;
-  box-shadow: 6px 6px 24px rgba(44, 37, 34, 0.12), inset 0 0 60px rgba(139, 94, 60, 0.03);
+  box-shadow: 6px 6px 24px rgba(26, 20, 16, 0.16), inset 0 0 60px rgba(122, 26, 26, 0.02);
   display: flex; flex-direction: column;
-  justify-content: center; align-items: center;
-  padding: 2.5rem 2rem;
-  text-align: center;
+  padding: 1.6rem 1.4rem 1.4rem 1.8rem;
 }
 .book-front::before {
   content: '';
   position: absolute; inset: 0;
   background:
-    linear-gradient(135deg, rgba(255,255,255,0.4), transparent 50%),
-    repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(139,94,60,0.02) 3px, rgba(139,94,60,0.02) 4px);
+    linear-gradient(135deg, rgba(255,255,255,0.35), transparent 50%),
+    repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(26,20,16,0.018) 3px, rgba(26,20,16,0.018) 4px);
   pointer-events: none;
 }
-.book-front::after {
+
+/* Three-hole punch echo on the spine side */
+.book-front-holes {
+  position: absolute;
+  left: 6px;
+  top: 18%; bottom: 18%;
+  width: 8px;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+}
+.book-front-holes span {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.05);
+  box-shadow: inset 0 1px 2px rgba(26,20,16,0.18);
+}
+
+.book-front-inner {
+  position: relative;
+  z-index: 2;
+  display: flex; flex-direction: column;
+  height: 100%;
+  padding-left: 14px;
+}
+
+.cover-masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 0.45rem;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  padding-bottom: .35rem;
+  border-bottom: 2px solid var(--rule);
+  margin-bottom: 0.05rem;
+}
+.cover-masthead::after {
   content: '';
   position: absolute;
-  left: 18px; top: 12%; bottom: 12%;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent, var(--accent-light), transparent);
-  opacity: 0.5;
+  left: 14px; right: 0;
+  margin-top: -0.35rem;
+  height: 1px;
+  background: var(--rule);
+  transform: translateY(0.7rem);
 }
-
-.cover-rule-top, .cover-rule-bottom {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  gap: 0;
+.cover-rule-thin {
+  height: 1px;
+  background: var(--rule);
+  margin-bottom: 1.1rem;
 }
-.cover-rule-top::before, .cover-rule-top::after,
-.cover-rule-bottom::before, .cover-rule-bottom::after {
-  content: '';
-  flex: 1;
-  height: 0;
-  border-top: 1px solid rgba(139, 94, 60, 0.25);
-  border-bottom: 1px solid rgba(139, 94, 60, 0.12);
-}
-.cover-rule-top { margin-bottom: 1.6rem; }
-.cover-rule-bottom { margin-top: 1.6rem; }
-/* compass ornament between rules */
-.cover-ornament {
-  width: 32px; height: 32px;
-  flex-shrink: 0;
-  margin: 0 .6rem;
-  opacity: 0.5;
-}
-.cover-ornament svg { width: 100%; height: 100%; }
-
-.cover-eyebrow {
-  font-family: var(--sans);
-  font-size: .58rem; font-weight: 500;
-  letter-spacing: .35em; text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: .6rem;
+.cover-field-label {
+  font-family: var(--mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
 }
 .cover-title-the {
   font-family: var(--serif);
-  font-size: .9rem; font-weight: 400;
-  color: var(--text-dim);
-  letter-spacing: .35em; text-transform: uppercase;
-  margin-bottom: -.15rem;
+  font-size: 1.5rem; font-weight: 500;
+  color: var(--text);
+  line-height: 1; margin-bottom: 0.2rem;
+  letter-spacing: -0.01em;
 }
 .cover-title-main {
   font-family: var(--serif);
-  font-size: 3.4rem; font-weight: 800; font-style: italic;
-  color: var(--accent);
-  line-height: 1; margin-bottom: .6rem;
-  letter-spacing: -.02em;
+  font-size: 2.2rem; font-weight: 600;
+  color: var(--text);
+  line-height: 0.95; margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+}
+.cover-rule-sub {
+  height: 1px;
+  background: var(--text-muted);
+  margin-bottom: 0.5rem;
+  width: 70%;
 }
 .cover-subtitle {
   font-family: var(--serif);
-  font-size: .82rem;
-  color: var(--text-body);
-  letter-spacing: .02em;
-  line-height: 1.5;
-  max-width: 230px;
-}
-.cover-subtitle .hook {
-  display: block;
-  color: var(--accent);
-  font-weight: 600;
+  font-size: 0.85rem;
   font-style: italic;
-  margin-top: .15rem;
+  color: var(--text-body);
+  line-height: 1.3;
+  margin-bottom: 1rem;
 }
-.cover-author {
-  font-family: var(--sans);
-  font-size: .65rem; font-weight: 500;
-  letter-spacing: .22em; text-transform: uppercase;
+
+.cover-fields {
+  margin-top: 0.4rem;
+  display: flex; flex-direction: column;
+  gap: 0.35rem;
+}
+.cover-field {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 0.5px solid rgba(26,20,16,0.18);
+  font-size: 0.55rem;
+}
+.cover-field-name {
+  font-family: var(--mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.14em;
   color: var(--text-muted);
-  margin-top: 1.2rem;
+  text-transform: uppercase;
+  min-width: 60px;
+}
+.cover-field-val {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.62rem;
+  color: var(--text);
+}
+
+.cover-stamp {
+  align-self: flex-end;
+  border: 1.5px solid var(--accent);
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.7rem;
+  transform: rotate(-6deg);
+  font-family: var(--mono);
+  font-size: 0.42rem;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  text-align: center;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.cover-stamp strong { font-size: 0.5rem; font-weight: 700; display: block; }
+
+.cover-footer {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 2px solid var(--rule);
+  position: relative;
+}
+.cover-footer::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 3px;
+  height: 1px;
+  background: var(--rule);
+}
+.cover-investigator {
+  font-family: var(--mono);
+  font-size: 0.45rem;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+.cover-author-sig {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-top: 0.1rem;
 }
 
 .book-spine {
   position: absolute; width: 36px; height: 100%; left: 0;
   transform: rotateY(-90deg) translateX(-18px);
-  background: linear-gradient(180deg, #E8E0D4, #DDD4C6 50%, #E8E0D4);
-  border: 1px solid rgba(139, 94, 60, 0.12);
+  background: linear-gradient(180deg, #e6dcc1, #ddd2b6 50%, #e6dcc1);
+  border: 1px solid rgba(26, 20, 16, 0.14);
   display: flex; align-items: center; justify-content: center;
-  box-shadow: -2px 0 10px rgba(44, 37, 34, 0.1);
+  box-shadow: -2px 0 10px rgba(26, 20, 16, 0.12);
   overflow: hidden;
 }
 .book-spine::before {
@@ -364,7 +462,7 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
   top: 0; bottom: 0; left: 0;
   width: 4px;
   background: var(--accent);
-  opacity: 0.6;
+  opacity: 0.7;
 }
 .book-spine::after {
   content: '';
@@ -372,28 +470,29 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
   top: 0; bottom: 0; right: 0;
   width: 4px;
   background: var(--accent);
-  opacity: 0.6;
+  opacity: 0.7;
 }
 .spine-text {
   font-family: var(--serif);
   font-size: .52rem; font-weight: 600;
-  color: var(--accent);
-  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--text);
+  letter-spacing: .15em; text-transform: uppercase;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
 
+/* Back cover */
 .book-back {
   position: absolute; width: 100%; height: 100%;
   transform: translateZ(-18px) rotateY(180deg);
-  background: linear-gradient(165deg, #FAF7F2, #F0EAE0 40%, #E8E0D4);
-  border: 1px solid rgba(139, 94, 60, 0.14);
+  background: linear-gradient(165deg, #f4ecd6, #ede4cd 50%, #e6dcc1);
+  border: 1px solid rgba(26, 20, 16, 0.14);
   border-radius: 8px 2px 2px 8px;
-  box-shadow: -4px 6px 16px rgba(44, 37, 34, 0.1);
+  box-shadow: -4px 6px 16px rgba(26, 20, 16, 0.12);
   backface-visibility: hidden;
   display: flex; flex-direction: column;
-  justify-content: center; align-items: center;
-  padding: 2.8rem 2.2rem;
+  justify-content: space-between;
+  padding: 2.4rem 2rem;
   text-align: left;
   overflow: hidden;
 }
@@ -401,76 +500,59 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
   content: '';
   position: absolute; inset: 0;
   background:
-    linear-gradient(135deg, rgba(255,255,255,0.3), transparent 50%),
-    repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(139,94,60,0.015) 3px, rgba(139,94,60,0.015) 4px);
+    linear-gradient(135deg, rgba(255,255,255,0.25), transparent 50%),
+    repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(26,20,16,0.012) 3px, rgba(26,20,16,0.012) 4px);
   pointer-events: none;
-}
-.book-back::after {
-  content: '';
-  position: absolute;
-  right: 18px; top: 10%; bottom: 10%;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent, var(--accent-light), transparent);
-  opacity: 0.4;
 }
 .back-content { position: relative; z-index: 1; }
 .back-eyebrow {
-  font-family: var(--sans);
-  font-size: .55rem; font-weight: 500;
-  letter-spacing: .3em; text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: .5rem; font-weight: 500;
+  letter-spacing: .22em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 1rem;
 }
-.back-blurb {
+.back-pullquote {
   font-family: var(--serif);
-  font-size: .78rem; font-style: italic;
+  font-size: .8rem; font-style: italic;
   line-height: 1.7;
   color: var(--text-body);
-  margin-bottom: 1.2rem;
-  border-left: 2px solid var(--accent);
-  padding-left: .9rem;
+  margin-bottom: 1.4rem;
 }
-.back-blurb-source {
-  font-family: var(--sans);
-  font-size: .55rem; font-weight: 500;
-  letter-spacing: .1em;
-  color: var(--text-dim);
-  margin-top: .4rem;
+.back-pullquote .section-mark {
+  display: block;
+  text-align: center;
+  margin: 0.6rem 0;
   font-style: normal;
-}
-.back-list {
-  list-style: none; padding: 0; margin: 0 0 1.4rem 0;
-}
-.back-list li {
-  font-family: var(--sans);
-  font-size: .68rem; font-weight: 400;
-  color: var(--text-body);
-  line-height: 1.6;
-  padding: .25rem 0;
-  padding-left: 1rem;
-  position: relative;
-}
-.back-list li::before {
-  content: '\2022';
   color: var(--accent);
-  position: absolute; left: 0;
-  font-size: .8rem;
+  font-size: .9rem;
 }
-.back-author-line {
-  font-family: var(--sans);
-  font-size: .6rem; font-weight: 500;
+.back-prose {
+  font-family: var(--serif);
+  font-size: 0.72rem;
+  line-height: 1.65;
+  color: var(--text-body);
+  margin-bottom: 1rem;
+}
+.back-prose p { margin-bottom: .7rem; }
+
+.back-meta {
+  position: relative; z-index: 1;
+  font-family: var(--mono);
+  font-size: .5rem; font-weight: 500;
   letter-spacing: .15em; text-transform: uppercase;
   color: var(--text-muted);
-  margin-top: .6rem;
   padding-top: .8rem;
-  border-top: 1px solid rgba(139, 94, 60, 0.12);
+  border-top: 1px solid rgba(26, 20, 16, 0.14);
+  display: flex; justify-content: space-between;
 }
+
 .book-click-hint {
   position: absolute;
   bottom: -2rem; left: 0; right: 0;
   text-align: center;
-  font-family: var(--sans);
-  font-size: .62rem; font-weight: 400;
-  letter-spacing: .12em; text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: .58rem; font-weight: 400;
+  letter-spacing: .15em; text-transform: uppercase;
   color: var(--text-dim);
   opacity: 0;
   transition: opacity .4s;
@@ -481,23 +563,23 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
   position: absolute; width: 36px;
   height: calc(100% - 6px); top: 3px; right: 0;
   transform: rotateY(90deg) translateZ(322px) translateX(18px);
-  background: repeating-linear-gradient(0deg, #d4cfc8, #d4cfc8 1px, #e8e4df 1px, #e8e4df 3px);
+  background: repeating-linear-gradient(0deg, #d4cabb, #d4cabb 1px, #e6dcc1 1px, #e6dcc1 3px);
   border-radius: 0 2px 2px 0;
-  box-shadow: 2px 0 8px rgba(44, 37, 34, 0.08);
+  box-shadow: 2px 0 8px rgba(26, 20, 16, 0.08);
 }
 .book-pages-bottom {
   position: absolute; width: calc(100% - 6px);
   height: 36px; bottom: 0; left: 3px;
   transform: rotateX(90deg) translateZ(18px) translateY(18px);
-  background: repeating-linear-gradient(90deg, #d4cfc8, #d4cfc8 1px, #e8e4df 1px, #e8e4df 3px);
+  background: repeating-linear-gradient(90deg, #d4cabb, #d4cabb 1px, #e6dcc1 1px, #e6dcc1 3px);
   border-radius: 0 0 2px 2px;
-  box-shadow: 0 2px 8px rgba(44, 37, 34, 0.08);
+  box-shadow: 0 2px 8px rgba(26, 20, 16, 0.08);
 }
 
 .book-shadow {
   width: 280px; height: 28px;
   margin: 2rem auto 0;
-  background: radial-gradient(ellipse, rgba(44, 37, 34, 0.1), transparent 70%);
+  background: radial-gradient(ellipse, rgba(26, 20, 16, 0.12), transparent 70%);
   filter: blur(8px);
   animation: shadowFloat 4s ease-in-out infinite;
 }
@@ -511,95 +593,152 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
   50% { transform: scale(.9); opacity: .5; }
 }
 
-/* ── PREMISE ── */
+/* ── PREMISE / EPIGRAPH ── */
 .section-line {
-  width: 50px; height: 2px;
-  background: var(--accent-light);
+  width: 50px; height: 1px;
+  background: var(--accent);
   margin: 0 auto 3rem;
-  border-radius: 1px;
 }
 
 .premise {
   padding: 8rem 2rem;
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+}
+.premise-mark {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
 }
 .premise-quote {
   font-family: var(--serif);
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-size: clamp(1.4rem, 2.6vw, 1.85rem);
   font-style: italic;
-  line-height: 1.5;
+  line-height: 1.55;
   margin-bottom: 2rem;
   color: var(--text);
 }
-.premise-quote span { color: var(--accent); font-weight: 600; }
+.premise-attr {
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 3rem;
+}
 .premise-body {
-  font-size: 1rem;
+  font-family: var(--serif);
+  font-size: 1.08rem;
   color: var(--text-body);
-  line-height: 1.9;
+  line-height: 1.85;
+  font-style: italic;
+  max-width: 580px;
+  margin: 0 auto;
 }
 
-/* ── CHAPTERS ── */
+/* ── CONTENTS ── */
 .chapters {
   padding: 6rem 2rem 8rem;
-  max-width: 1100px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 .chapters-header { text-align: center; margin-bottom: 5rem; }
 .chapters-eyebrow {
-  font-size: .72rem; font-weight: 500;
-  letter-spacing: .25em; text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: .68rem; font-weight: 500;
+  letter-spacing: .22em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 1rem;
 }
 .chapters-title {
   font-family: var(--serif);
   font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
 }
-
-.chapters-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1px;
-  background: var(--border-strong);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.chapter-card {
-  background: var(--bg);
-  padding: 2.5rem 2rem;
-  transition: all .4s;
-}
-.chapter-card:hover { background: var(--bg-card); }
-.chapter-card:hover .ch-num { color: var(--accent); }
-
-.ch-num {
-  font-size: .68rem; font-weight: 500;
-  letter-spacing: .18em; text-transform: uppercase;
-  color: var(--text-dim);
-  margin-bottom: .8rem;
-  transition: color .3s;
-}
-.ch-name {
+.chapters-sub {
   font-family: var(--serif);
-  font-size: 1.25rem; font-weight: 600;
-  margin-bottom: .8rem; line-height: 1.3;
-  color: var(--text);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-muted);
 }
-.ch-desc {
+
+.toc-part {
+  margin-bottom: 3rem;
+}
+.toc-part-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid var(--text);
+  margin-bottom: 0.4rem;
+}
+.toc-part-num {
+  font-family: var(--mono);
+  font-size: .8rem;
+  letter-spacing: .2em;
+  color: var(--accent);
+  font-weight: 500;
+}
+.toc-part-title {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.toc-part-meta {
+  margin-left: auto;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .9rem;
+  color: var(--text-muted);
+}
+.toc-entries {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+.toc-entry {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  padding: 0.55rem 0.8rem 0.55rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: background .2s, padding .2s;
+}
+.toc-entry:hover {
+  background: var(--accent-bg);
+  padding-left: 0.6rem;
+}
+.toc-num {
+  font-family: var(--serif);
   font-size: .85rem;
-  color: var(--text-body);
-  line-height: 1.7;
+  font-style: italic;
+  color: var(--text-dim);
+  min-width: 3em;
+  flex-shrink: 0;
+}
+.toc-name {
+  font-family: var(--serif);
+  font-size: .98rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+.toc-laws .toc-name {
+  font-style: italic;
+  color: var(--accent);
 }
 
 /* ── ABOUT ── */
 .about {
   padding: 8rem 2rem;
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -607,72 +746,102 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
   align-items: start;
 }
 .about-label {
-  font-size: .72rem; font-weight: 500;
-  letter-spacing: .25em; text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: .68rem; font-weight: 500;
+  letter-spacing: .22em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 1.5rem;
 }
 .about-cred {
   font-family: var(--serif);
-  font-size: 1.8rem; font-weight: 600;
-  line-height: 1.4; margin-bottom: 1.5rem;
+  font-size: 1.9rem; font-weight: 600;
+  line-height: 1.25; margin-bottom: 1.5rem;
   color: var(--text);
+  letter-spacing: -0.01em;
 }
-.about-stats { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
-.a-stat { display: flex; align-items: baseline; gap: 1rem; }
+.about-cred em { font-style: italic; color: var(--accent); }
+
+.about-stats { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+.a-stat { display: flex; align-items: baseline; gap: 1.2rem; }
 .a-stat-n {
   font-family: var(--serif);
-  font-size: 2rem; font-weight: 700;
+  font-size: 1.6rem; font-weight: 600;
   color: var(--accent);
-  min-width: 70px; flex-shrink: 0;
+  min-width: 60px; flex-shrink: 0;
+  letter-spacing: 0.02em;
 }
-.a-stat-sm { font-size: 1.3rem; }
-.a-stat-l { font-size: .85rem; color: var(--text-body); }
-.about-text { font-size: .95rem; color: var(--text-body); line-height: 1.9; }
-.about-text p { margin-bottom: 1.5rem; }
+.a-stat-sm { font-size: 1.15rem; }
+.a-stat-l {
+  font-family: var(--sans);
+  font-size: .82rem;
+  color: var(--text-body);
+}
+.about-text { font-family: var(--serif); font-size: 1.05rem; color: var(--text-body); line-height: 1.85; }
+.about-text p { margin-bottom: 1.3rem; }
+.about-text p:last-child { margin-bottom: 0; }
+.about-text em { font-style: italic; }
 
 /* ── EXCERPT ── */
 .excerpt {
-  padding: 6rem 2rem 8rem;
-  max-width: 760px;
+  padding: 7rem 2rem 5rem;
+  max-width: 740px;
   margin: 0 auto;
   border-top: 1px solid var(--border);
 }
 .excerpt-header { text-align: center; margin-bottom: 4rem; }
 .excerpt-ey {
-  font-size: .72rem; font-weight: 500;
-  letter-spacing: .25em; text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: .68rem; font-weight: 500;
+  letter-spacing: .22em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 1rem;
+}
+.excerpt-mark {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.4rem;
 }
 .excerpt-ti {
   font-family: var(--serif);
-  font-size: clamp(1.6rem, 3.5vw, 2.3rem);
-  font-weight: 700;
+  font-size: clamp(1.8rem, 3.5vw, 2.3rem);
+  font-weight: 600;
   color: var(--text);
+  letter-spacing: -0.01em;
 }
 .excerpt-body {
   font-family: var(--serif);
-  font-size: 1.08rem;
-  line-height: 2;
+  font-size: 1.1rem;
+  line-height: 1.9;
   color: var(--text-body);
 }
-.excerpt-body p { margin-bottom: 1.5rem; text-indent: 2rem; }
-.excerpt-body p:first-child { text-indent: 0; }
+.excerpt-body p { margin-bottom: 1.4rem; }
+.excerpt-body p.indent { text-indent: 1.6rem; margin-bottom: 0.2rem; }
 .excerpt-body p:first-child::first-letter {
-  font-size: 3.5rem; font-weight: 700;
+  font-family: var(--serif);
+  font-size: 3.6rem; font-weight: 600;
   color: var(--accent);
-  float: left; line-height: 1;
-  margin-right: .5rem; margin-top: .1rem;
+  float: left; line-height: 0.9;
+  margin-right: .6rem; margin-top: .25rem;
+  padding-right: 0.1rem;
+}
+
+.excerpt-divider {
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--text);
+  margin: 2.5rem 0;
 }
 
 .excerpt-fade {
-  position: relative; margin-top: -3rem;
-  padding-top: 3rem;
-  background: linear-gradient(to bottom, transparent, var(--bg));
-  text-align: center; padding-bottom: 2rem;
+  position: relative;
+  padding: 2.5rem 0 0;
+  text-align: center;
 }
 .excerpt-fade a {
-  font-size: .78rem; font-weight: 500;
-  letter-spacing: .12em; text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: .72rem; font-weight: 500;
+  letter-spacing: .15em; text-transform: uppercase;
   color: var(--accent); text-decoration: none;
   border-bottom: 1px solid var(--accent-light);
   padding-bottom: .3rem;
@@ -680,49 +849,80 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
 }
 .excerpt-fade a:hover { color: var(--accent-hover); border-color: var(--accent); }
 
+/* ── COMPOSITES NOTE ── */
+.composites {
+  padding: 5rem 2rem;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+.composites-mark {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+.composites-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+}
+.composites-text strong { font-style: normal; color: var(--text); font-weight: 500; }
+
 /* ── CTA ── */
 .cta-section {
   padding: 8rem 2rem;
   text-align: center;
   position: relative;
   background: var(--bg-warm);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 .cta-section::before {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at center, rgba(139, 94, 60, 0.04), transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(122, 26, 26, 0.04), transparent 70%);
   pointer-events: none;
 }
 .cta-ey {
-  font-size: .72rem; font-weight: 500;
-  letter-spacing: .25em; text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: .68rem; font-weight: 500;
+  letter-spacing: .22em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 1.5rem;
 }
 .cta-ti {
   font-family: var(--serif);
   font-size: clamp(2rem, 4.5vw, 3.2rem);
-  font-weight: 700;
+  font-weight: 600;
   max-width: 700px;
   margin: 0 auto 1.5rem;
   line-height: 1.2;
   color: var(--text);
+  letter-spacing: -0.01em;
 }
+.cta-ti em { font-style: italic; color: var(--accent); }
 .cta-sub {
-  font-size: 1rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
   color: var(--text-body);
-  max-width: 500px;
+  max-width: 540px;
   margin: 0 auto 3rem;
+  line-height: 1.7;
 }
 .cta-bw { margin-bottom: 3rem; display: flex; justify-content: center; }
 .cta-bw .book-scene { transform: scale(.8); }
 
 .cta-btn {
   display: inline-block;
-  font-size: .85rem; font-weight: 500;
-  letter-spacing: .12em; text-transform: uppercase;
-  color: #fff;
+  font-family: var(--mono);
+  font-size: .8rem; font-weight: 500;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--bg);
   background: var(--accent);
-  padding: 1.15rem 3.5rem;
+  padding: 1.15rem 3.2rem;
   text-decoration: none;
   transition: all .4s;
   margin-bottom: 1.5rem;
@@ -731,15 +931,20 @@ nav.scrolled { padding: 0.9rem 3rem; box-shadow: var(--shadow-sm); }
 .cta-btn:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 16px 48px rgba(139, 94, 60, 0.2);
+  box-shadow: 0 16px 48px rgba(122, 26, 26, 0.2);
 }
-.cta-price { font-size: .8rem; color: var(--text-dim); }
+.cta-price {
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
 
 /* ── FOOTER ── */
 footer {
   padding: 4rem 2rem;
   text-align: center;
-  border-top: 1px solid var(--border);
   background: var(--bg);
 }
 .footer-links {
@@ -748,18 +953,28 @@ footer {
   margin-bottom: 1.5rem;
 }
 .footer-links a {
-  font-size: .8rem; color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: .7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
   text-decoration: none; transition: color .3s;
 }
 .footer-links a:hover { color: var(--accent); }
 .footer-logo {
   font-family: var(--serif);
-  font-size: 1rem; font-weight: 600;
-  color: var(--accent);
-  letter-spacing: .1em;
+  font-size: 1.05rem; font-weight: 600;
+  color: var(--text);
+  letter-spacing: .04em;
   margin-bottom: 1rem;
 }
-.footer-copy { font-size: .75rem; color: var(--text-dim); }
+.footer-logo .section-mark { color: var(--accent); margin-right: 0.4rem; }
+.footer-copy {
+  font-family: var(--mono);
+  font-size: .65rem;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
+}
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
@@ -784,12 +999,16 @@ footer {
     gap: 3rem;
     text-align: center;
   }
+  .hero-rule { margin-left: auto; margin-right: auto; }
   .book-scene { width: 260px; height: 370px; }
-  .cover-title-main { font-size: 2.6rem; }
+  .cover-title-main { font-size: 1.7rem; }
+  .cover-title-the { font-size: 1.15rem; }
   .book-pages-right { transform: rotateY(90deg) translateZ(242px) translateX(18px); }
   nav { padding: 1rem 1.5rem; }
   .nav-links { gap: 1rem; }
-  .chapters-grid { grid-template-columns: 1fr; }
+  .toc-entries { grid-template-columns: 1fr; }
+  .toc-part-header { flex-wrap: wrap; }
+  .toc-part-meta { margin-left: 0; width: 100%; }
   .about { grid-template-columns: 1fr; gap: 3rem; }
 }
 </style>
@@ -797,7 +1016,7 @@ footer {
 <body>
 
 <nav id="nav">
-  <a href="index.html" class="nav-logo">The Coordinator</a>
+  <a href="index.html" class="nav-logo"><span class="nav-section">§</span>The Coordinator</a>
   <div class="nav-links">
     <a href="about.html" class="nav-link">About</a>
     <a href="blog.html" class="nav-link">Blog</a>
@@ -807,42 +1026,68 @@ footer {
 
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-eyebrow">A Field Guide for Clinical Research Coordinators</div>
-    <h1 class="hero-title">The<br><em>Coordinator</em></h1>
-    <p class="hero-subtitle">A Field Guide to Clinical Research That Nobody Gives You</p>
-    <p class="hero-author">by Ish M.A &middot; ACRP-CP</p>
-    <a href="https://buy.stripe.com/bJe4gz20yfJH5WR9pU4ZG0a" class="hero-cta">Get Your Copy</a>
+    <div class="hero-eyebrow">Essays &middot; Literary Non-Fiction &middot; Clinical Research</div>
+    <h1 class="hero-title">The Coordinator</h1>
+    <div class="hero-rule"></div>
+    <p class="hero-subtitle">Notes from the Bottom of the Trial</p>
+    <p class="hero-author">By Ish &middot; Forty-Two Essays</p>
+    <a href="https://buy.stripe.com/bJe4gz20yfJH5WR9pU4ZG0a" class="hero-cta">Get the Book</a>
   </div>
   <div class="hero-book">
     <div class="book-scene">
       <div class="book-wrapper">
         <div class="book-front">
-          <div class="cover-eyebrow">A Field Guide</div>
-          <div class="cover-rule-top">
-            <div class="cover-ornament"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#8B5E3C" stroke-width="0.8"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="3"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="16" y1="26" x2="16" y2="30"/><line x1="2" y1="16" x2="6" y2="16"/><line x1="26" y1="16" x2="30" y2="16"/><line x1="16" y1="6" x2="14" y2="10"/><line x1="16" y1="6" x2="18" y2="10"/></svg></div>
+          <div class="book-front-holes"><span></span><span></span><span></span></div>
+          <div class="book-front-inner">
+            <div class="cover-masthead">
+              <span>FORM 1572-A &middot; §4.2</span>
+              <span>PAGE 001 OF 001</span>
+            </div>
+            <div class="cover-field-label" style="margin-top:.55rem;">Study Title:</div>
+            <div class="cover-title-the">THE</div>
+            <div class="cover-title-main">COORDINATOR</div>
+            <div class="cover-rule-sub"></div>
+            <div class="cover-subtitle">Notes from the Bottom of the Trial</div>
+            <div class="cover-fields">
+              <div class="cover-field">
+                <span class="cover-field-name">Protocol</span>
+                <span class="cover-field-val">three hundred and twelve pages</span>
+              </div>
+              <div class="cover-field">
+                <span class="cover-field-name">Patient</span>
+                <span class="cover-field-val">composite &mdash; names changed</span>
+              </div>
+              <div class="cover-field">
+                <span class="cover-field-name">Outcome</span>
+                <span class="cover-field-val">pending</span>
+              </div>
+            </div>
+            <div class="cover-stamp">
+              <strong>ESSAYS</strong>
+              Literary Non-Fiction<br>Clinical Research
+            </div>
+            <div class="cover-footer">
+              <div class="cover-investigator">Investigator of Record:</div>
+              <div class="cover-author-sig">Ish</div>
+            </div>
           </div>
-          <div class="cover-title-the">THE</div>
-          <div class="cover-title-main">Coordinator</div>
-          <div class="cover-subtitle">A Field Guide to Clinical Research<span class="hook">That Nobody Gives You</span></div>
-          <div class="cover-rule-bottom">
-            <div class="cover-ornament"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#8B5E3C" stroke-width="0.8"><rect x="8" y="8" width="16" height="16" rx="1"/><line x1="12" y1="13" x2="20" y2="13"/><line x1="12" y1="16" x2="20" y2="16"/><line x1="12" y1="19" x2="17" y2="19"/></svg></div>
-          </div>
-          <div class="cover-author">Ish M.A</div>
         </div>
-        <div class="book-spine"><div class="spine-text">The Coordinator &bull; Ish M.A</div></div>
+        <div class="book-spine"><div class="spine-text">The Coordinator &nbsp; &middot; &nbsp; Ish</div></div>
         <div class="book-back">
           <div class="back-content">
-            <div class="back-eyebrow">What's Inside</div>
-            <div class="back-blurb">&ldquo;I wish someone had handed me this book on my first day. It would have saved me a year of mistakes.&rdquo;<div class="back-blurb-source">&mdash; The book every new CRC deserves</div></div>
-            <ul class="back-list">
-              <li>12 hard-won principles from the trenches</li>
-              <li>Protocol mastery, recruitment psychology &amp; data integrity</li>
-              <li>The Three-Bucket System for managing chaos</li>
-              <li>How to build a CRA network that opens doors</li>
-              <li>Burnout prevention &amp; career-building strategies</li>
-              <li>Written for CRCs, by a CRC who lived every chapter</li>
-            </ul>
-            <div class="back-author-line">Ish M.A &middot; ACRP-CP</div>
+            <div class="back-eyebrow">From the Epigraph</div>
+            <div class="back-pullquote">
+              The training the institution requires is the training the institution can prove it conducted. The training the coordinator receives is the one she conducts on herself, in the year after, in response to mistakes the curriculum was designed to prevent and which it never quite does.
+              <span class="section-mark">§</span>
+            </div>
+            <div class="back-prose">
+              <p>Forty-two essays on what it is to coordinate a clinical trial. Composites and unsentimental.</p>
+              <p>Written for the coordinator who was handed a binder and told good luck, and is now, some months later, looking for a different kind of book.</p>
+            </div>
+          </div>
+          <div class="back-meta">
+            <span>Essays</span>
+            <span>§§ I&ndash;XLII</span>
           </div>
         </div>
         <div class="book-pages-right"></div>
@@ -859,95 +1104,192 @@ footer {
 
 <section class="premise reveal">
   <div class="section-line"></div>
-  <p class="premise-quote">&ldquo;The CRC is the <span>most important</span> and <span>least trained</span> person in clinical research.&rdquo;</p>
-  <p class="premise-body">Clinical trials don&rsquo;t fail because of bad science. They fail because of bad coordination. And nobody teaches coordinators how to actually do the job &mdash; they just hand you a protocol and wish you luck. This book is everything that should have come after &ldquo;good luck.&rdquo;</p>
+  <div class="premise-mark">§</div>
+  <p class="premise-quote">&ldquo;This is not a manual. There are manuals. The certification boards publish them and the Code of Federal Regulations is, in its way, the longest and most expensive manual ever written. I have read them. So have you. None of them will help you on the Tuesday morning that this book is about.&rdquo;</p>
+  <div class="premise-attr">— A Note Before</div>
+  <p class="premise-body">The book is not training. The book is what someone wrote after, in the hope that it would shorten the distance, slightly, between what you are about to learn and what someone has already learned for you. The distance will still be long. The book is the most I have been able to do about that.</p>
 </section>
 
 <section class="chapters reveal">
   <div class="chapters-header">
-    <div class="chapters-eyebrow">Inside the Book</div>
-    <h2 class="chapters-title">12 Principles. Zero Fluff.</h2>
+    <div class="chapters-eyebrow">Contents</div>
+    <h2 class="chapters-title">Forty-Two Essays</h2>
+    <p class="chapters-sub">arranged in roughly the order I came to understand what they describe</p>
   </div>
-  <div class="chapters-grid">
-    <div class="chapter-card"><div class="ch-num">Chapter 01</div><div class="ch-name">Know Your Protocol Like a Lawyer Knows Case Law</div><div class="ch-desc">Protocol fluency is the foundation. How to study it, query it with AI tools, and never fumble an answer in front of a patient again.</div></div>
-    <div class="chapter-card"><div class="ch-num">Chapter 02</div><div class="ch-name">You Are the Glue, Not the Star</div><div class="ch-desc">Think five steps ahead like a chess player. Be a cause, not an effect.</div></div>
-    <div class="chapter-card"><div class="ch-num">Chapter 03</div><div class="ch-name">Recruitment Is a Sales Job (And That&rsquo;s Okay)</div><div class="ch-desc">Patient archetypes, physician outreach, screening frameworks, and the psychology of enrollment.</div></div>
-    <div class="chapter-card"><div class="ch-num">Chapter 04</div><div class="ch-name">Your Data Is the Product</div><div class="ch-desc">The economic chain from source docs to FDA submission. Why sloppy data costs sites their next study.</div></div>
-    <div class="chapter-card"><div class="ch-num">Chapter 05</div><div class="ch-name">The Monitor Is Not Your Enemy</div><div class="ch-desc">Building a CRA relationship that opens doors. Your network is your career.</div></div>
-    <div class="chapter-card"><div class="ch-num">Chapter 06</div><div class="ch-name">Patients Will Teach You More Than Any SOP</div><div class="ch-desc">Consent is a conversation, not a document. Retention is a relationship, not a system.</div></div>
-    <div class="chapter-card"><div class="ch-num">Chapter 07</div><div class="ch-name">Ask the Stupid Question</div><div class="ch-desc">The cost of assuming is infinitely higher than the cost of asking.</div></div>
-    <div class="chapter-card"><div class="ch-num">Chapter 08</div><div class="ch-name">Own Your Mistakes Before They Own You</div><div class="ch-desc">Protocol deviations happen. The four-minute conversation is always better than the cover-up.</div></div>
-    <div class="chapter-card"><div class="ch-num">Chapter 09</div><div class="ch-name">Systems Beat Memory Every Time</div><div class="ch-desc">The Three-Bucket System: clinical, data, admin. A mental model that turns chaos into triage.</div></div>
-    <div class="chapter-card"><div class="ch-num">Chapter 10</div><div class="ch-name">Know When the PI Needs to Be in the Room</div><div class="ch-desc">Scope management as a survival skill. How to escalate with context and develop judgment.</div></div>
-    <div class="chapter-card"><div class="ch-num">Chapter 11</div><div class="ch-name">This Job Will Burn You Out If You Let It</div><div class="ch-desc">The three sources of CRC burnout and how to build sustainability.</div></div>
-    <div class="chapter-card"><div class="ch-num">Chapter 12</div><div class="ch-name">Certification Is a Floor, Not a Ceiling</div><div class="ch-desc">What ACRP-CP means, what it doesn&rsquo;t, and how to build a career.</div></div>
+
+  <div class="toc-part">
+    <div class="toc-part-header">
+      <span class="toc-part-num">Part I</span>
+      <span class="toc-part-title">The First Year</span>
+      <span class="toc-part-meta">Months 0&ndash;12</span>
+    </div>
+    <div class="toc-entries">
+      <div class="toc-entry"><span class="toc-num">§ I</span><span class="toc-name">The Aspirin</span></div>
+      <div class="toc-entry"><span class="toc-num">§ II</span><span class="toc-name">Good Luck</span></div>
+      <div class="toc-entry"><span class="toc-num">§ III</span><span class="toc-name">On Being the Glue</span></div>
+      <div class="toc-entry"><span class="toc-num">§ IV</span><span class="toc-name">The Binder</span></div>
+      <div class="toc-entry"><span class="toc-num">§ V</span><span class="toc-name">The Schedule of Assessments</span></div>
+      <div class="toc-entry"><span class="toc-num">§ VI</span><span class="toc-name">On the Word "Source"</span></div>
+      <div class="toc-entry"><span class="toc-num">§ VII</span><span class="toc-name">The Screening Call</span></div>
+      <div class="toc-entry"><span class="toc-num">§ VIII</span><span class="toc-name">The First Consent</span></div>
+      <div class="toc-entry"><span class="toc-num">§ IX</span><span class="toc-name">The Inbox</span></div>
+      <div class="toc-entry"><span class="toc-num">§ X</span><span class="toc-name">Sunday Evening</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XI</span><span class="toc-name">The Disengaged PI</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XII</span><span class="toc-name">The Engaged PI</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XIII</span><span class="toc-name">On Certification</span></div>
+    </div>
+  </div>
+
+  <div class="toc-part">
+    <div class="toc-part-header">
+      <span class="toc-part-num">Part II</span>
+      <span class="toc-part-title">The Middle Years</span>
+      <span class="toc-part-meta">Months 12&ndash;36</span>
+    </div>
+    <div class="toc-entries">
+      <div class="toc-entry toc-laws"><span class="toc-num">§ XIV</span><span class="toc-name">The Laws of the Coordinator (I)</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XV</span><span class="toc-name">The Monitoring Visit</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XVI</span><span class="toc-name">Source Document Discipline</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XVII</span><span class="toc-name">The EDC and Its Queries</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XVIII</span><span class="toc-name">The CRA Who Became a Friend</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XIX</span><span class="toc-name">The CRA Who Was Looking for Findings</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XX</span><span class="toc-name">The Sub-Investigator</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXI</span><span class="toc-name">The Front Desk</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXII</span><span class="toc-name">The Four-Minute Conversation</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXIII</span><span class="toc-name">The Calendar</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXIV</span><span class="toc-name">The Patient Who Lied</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXV</span><span class="toc-name">The Patient Who Was Honest</span></div>
+      <div class="toc-entry toc-laws"><span class="toc-num">§ XXVI</span><span class="toc-name">The Laws of the Coordinator (II)</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXVII</span><span class="toc-name">The SAE</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXVIII</span><span class="toc-name">Eleven at Night</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXIX</span><span class="toc-name">What Data Quality Means and Does Not Mean</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXX</span><span class="toc-name">What a Trial Is</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXXI</span><span class="toc-name">The Closeout Visit</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXXII</span><span class="toc-name">The Patient Who Died</span></div>
+      <div class="toc-entry toc-laws"><span class="toc-num">§ XXXIII</span><span class="toc-name">The Laws of the Coordinator (III)</span></div>
+    </div>
+  </div>
+
+  <div class="toc-part">
+    <div class="toc-part-header">
+      <span class="toc-part-num">Part III</span>
+      <span class="toc-part-title">The Question of Leaving</span>
+      <span class="toc-part-meta">Months 36+</span>
+    </div>
+    <div class="toc-entries">
+      <div class="toc-entry"><span class="toc-num">§ XXXIV</span><span class="toc-name">The Project Manager</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXXV</span><span class="toc-name">The Patient Who Did Not Sign</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXXVI</span><span class="toc-name">The Colleague Who Burned Out and Stayed</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXXVII</span><span class="toc-name">The Body Keeps Its Own Records</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXXVIII</span><span class="toc-name">The Publication</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XXXIX</span><span class="toc-name">The Question of Leaving</span></div>
+      <div class="toc-entry toc-laws"><span class="toc-num">§ XL</span><span class="toc-name">The Laws of the Coordinator (IV)</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XLI</span><span class="toc-name">What Comes After</span></div>
+      <div class="toc-entry"><span class="toc-num">§ XLII</span><span class="toc-name">A Letter to the New Coordinator</span></div>
+    </div>
   </div>
 </section>
 
 <section class="about reveal">
   <div>
     <div class="about-label">About the Author</div>
-    <div class="about-cred">Written from<br>the trenches.</div>
+    <div class="about-cred">Written in the cracks <em>between trials.</em></div>
     <div class="about-stats">
-      <div class="a-stat"><div class="a-stat-n">5+</div><div class="a-stat-l">Years in clinical research</div></div>
-      <div class="a-stat"><div class="a-stat-n a-stat-sm">RA&rarr;CTS</div><div class="a-stat-l">Research Assistant to Clinical Trial Specialist</div></div>
-      <div class="a-stat"><div class="a-stat-n">ACRP</div><div class="a-stat-l">Certified Professional (CP)</div></div>
+      <div class="a-stat"><div class="a-stat-n">5+</div><div class="a-stat-l">Years coordinating clinical trials</div></div>
+      <div class="a-stat"><div class="a-stat-n a-stat-sm">42</div><div class="a-stat-l">Essays in the finished book</div></div>
+      <div class="a-stat"><div class="a-stat-n a-stat-sm">ACRP-CP</div><div class="a-stat-l">Certified Professional</div></div>
     </div>
   </div>
   <div class="about-text">
-    <p>Ish M.A has held every seat at the research site table: research assistant, patient recruiter, CRC, senior CRC, and clinical trial specialist.</p>
-    <p>This book isn&rsquo;t theory. It&rsquo;s the field manual he wished someone had handed him on day one.</p>
-    <p>He is also the creator of <em>Clinical Research Question Bank</em>, the exam prep platform for the ACRP-CP certification.</p>
+    <p>Ish M.A is a clinical research coordinator. He has worked at academic centers and at private sites, in oncology and cardiology and metabolic disease, and one rare-disease trial that ended badly for reasons that were no one's fault and everyone's.</p>
+    <p>He wrote this book because no one wrote it for him. The senior coordinator who trained him handed him a binder and said good luck. <em>This book is what comes after good luck.</em></p>
+    <p>It is not a manual. There are manuals. None of them will help on the Tuesday morning the book is about.</p>
   </div>
 </section>
 
 <section class="excerpt reveal">
   <div class="excerpt-header">
     <div class="excerpt-ey">Read a Sample</div>
-    <div class="excerpt-ti">From Chapter 9: Systems Beat Memory</div>
+    <div class="excerpt-mark">§ I</div>
+    <div class="excerpt-ti">The Aspirin</div>
   </div>
   <div class="excerpt-body">
-    <p>Three studies. Fourteen active subjects across all of them. A monitoring visit on Thursday, an IRB continuing review due Friday, and a patient coming in at 8am tomorrow for a visit that involves fasting labs, an ECG, a physical exam, and a two-hour post-dose observation. And I had forty-three unread emails, six of which were from the same CRA asking about a query from two weeks ago.</p>
-    <p>I was sitting at my desk at 4:30pm on a Wednesday trying to figure out which fire to put out first. My desk looked like a crime scene of sticky notes.</p>
-    <p>That was the night I built the system. Not because I read a productivity book. I built it because I was drowning and I needed something to tell me what mattered first&hellip;</p>
+    <p>The first protocol I was given was three hundred and twelve pages and I had been a clinical research coordinator for eleven days. The patient sitting across from me was fifty-eight years old. She had driven forty minutes for the screening visit. She had recently lost her husband. She told me this in the unprompted way that patients in clinic tell you things, as though the act of being in the chair has loosened something in them, and now they cannot remember which information is medical and which information is not, and so they offer all of it, and you receive all of it, and you write down the parts the regulations require you to write down.</p>
+    <p class="indent">She also mentioned, in the same easy register, that she took eighty-one milligrams of aspirin every morning. She had taken it that morning. She took it because her cardiologist had told her to take it, twelve years earlier, and she had not stopped.</p>
+    <p class="indent">I did not know if aspirin was prohibited.</p>
+    <p class="indent">I should have known. The information was in the protocol, in a table titled Prohibited and Restricted Concomitant Medications, which I would later find on page 147, and which I had glanced at during what is generously called my training.</p>
+    <div class="excerpt-divider">§</div>
+    <p style="font-style: italic; text-align: center; color: var(--text); max-width: 28em; margin: 0 auto;">If the patient is in the room and you are reading, you have already failed. The reading is what you do at night.</p>
   </div>
-  <div class="excerpt-fade"><a href="#buy">Continue reading &mdash; Get the full book &rarr;</a></div>
+  <div class="excerpt-fade"><a href="#buy">Continue reading &mdash; Get the book &rarr;</a></div>
+</section>
+
+<section class="composites reveal">
+  <div class="composites-mark">§</div>
+  <p class="composites-text">
+    <strong>A note on what this is.</strong> Names, patients, colleagues, and institutions are composites. The events happened. The arrangement is a fiction. The lessons are not composites. The lessons are the only true things in the book.
+  </p>
 </section>
 
 <section class="cta-section reveal" id="buy">
-  <div class="cta-ey">Start Reading Today</div>
-  <h2 class="cta-ti">The training that should exist but doesn&rsquo;t.</h2>
-  <p class="cta-sub">12 chapters. ~120 pages. The field guide for every CRC who was handed a protocol and told &ldquo;good luck.&rdquo;</p>
+  <div class="cta-ey">The Book</div>
+  <h2 class="cta-ti">For the coordinator <em>who was handed a binder</em> and told good luck.</h2>
+  <p class="cta-sub">Forty-two essays. One hundred sixty-seven pages. The book is what comes after good luck.</p>
   <div class="cta-bw">
     <div class="book-scene">
       <div class="book-wrapper">
         <div class="book-front">
-          <div class="cover-eyebrow">A Field Guide</div>
-          <div class="cover-rule-top">
-            <div class="cover-ornament"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#8B5E3C" stroke-width="0.8"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="3"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="16" y1="26" x2="16" y2="30"/><line x1="2" y1="16" x2="6" y2="16"/><line x1="26" y1="16" x2="30" y2="16"/><line x1="16" y1="6" x2="14" y2="10"/><line x1="16" y1="6" x2="18" y2="10"/></svg></div>
+          <div class="book-front-holes"><span></span><span></span><span></span></div>
+          <div class="book-front-inner">
+            <div class="cover-masthead">
+              <span>FORM 1572-A &middot; §4.2</span>
+              <span>PAGE 001 OF 001</span>
+            </div>
+            <div class="cover-field-label" style="margin-top:.55rem;">Study Title:</div>
+            <div class="cover-title-the">THE</div>
+            <div class="cover-title-main">COORDINATOR</div>
+            <div class="cover-rule-sub"></div>
+            <div class="cover-subtitle">Notes from the Bottom of the Trial</div>
+            <div class="cover-fields">
+              <div class="cover-field">
+                <span class="cover-field-name">Protocol</span>
+                <span class="cover-field-val">three hundred and twelve pages</span>
+              </div>
+              <div class="cover-field">
+                <span class="cover-field-name">Patient</span>
+                <span class="cover-field-val">composite &mdash; names changed</span>
+              </div>
+              <div class="cover-field">
+                <span class="cover-field-name">Outcome</span>
+                <span class="cover-field-val">pending</span>
+              </div>
+            </div>
+            <div class="cover-stamp">
+              <strong>ESSAYS</strong>
+              Literary Non-Fiction<br>Clinical Research
+            </div>
+            <div class="cover-footer">
+              <div class="cover-investigator">Investigator of Record:</div>
+              <div class="cover-author-sig">Ish</div>
+            </div>
           </div>
-          <div class="cover-title-the">THE</div>
-          <div class="cover-title-main">Coordinator</div>
-          <div class="cover-subtitle">A Field Guide to Clinical Research<span class="hook">That Nobody Gives You</span></div>
-          <div class="cover-rule-bottom">
-            <div class="cover-ornament"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#8B5E3C" stroke-width="0.8"><rect x="8" y="8" width="16" height="16" rx="1"/><line x1="12" y1="13" x2="20" y2="13"/><line x1="12" y1="16" x2="20" y2="16"/><line x1="12" y1="19" x2="17" y2="19"/></svg></div>
-          </div>
-          <div class="cover-author">Ish M.A</div>
         </div>
-        <div class="book-spine"><div class="spine-text">The Coordinator &bull; Ish M.A</div></div>
+        <div class="book-spine"><div class="spine-text">The Coordinator &nbsp; &middot; &nbsp; Ish</div></div>
         <div class="book-back">
           <div class="back-content">
-            <div class="back-eyebrow">What's Inside</div>
-            <div class="back-blurb">&ldquo;I wish someone had handed me this book on my first day. It would have saved me a year of mistakes.&rdquo;<div class="back-blurb-source">&mdash; The book every new CRC deserves</div></div>
-            <ul class="back-list">
-              <li>12 hard-won principles from the trenches</li>
-              <li>Protocol mastery, recruitment psychology &amp; data integrity</li>
-              <li>The Three-Bucket System for managing chaos</li>
-              <li>How to build a CRA network that opens doors</li>
-              <li>Burnout prevention &amp; career-building strategies</li>
-              <li>Written for CRCs, by a CRC who lived every chapter</li>
-            </ul>
-            <div class="back-author-line">Ish M.A &middot; ACRP-CP</div>
+            <div class="back-eyebrow">From the Epigraph</div>
+            <div class="back-pullquote">
+              The training the institution requires is the training the institution can prove it conducted. The training the coordinator receives is the one she conducts on herself, in the year after, in response to mistakes the curriculum was designed to prevent and which it never quite does.
+              <span class="section-mark">§</span>
+            </div>
+            <div class="back-prose">
+              <p>Forty-two essays on what it is to coordinate a clinical trial. Composites and unsentimental.</p>
+              <p>Written for the coordinator who was handed a binder and told good luck, and is now, some months later, looking for a different kind of book.</p>
+            </div>
+          </div>
+          <div class="back-meta">
+            <span>Essays</span>
+            <span>§§ I&ndash;XLII</span>
           </div>
         </div>
         <div class="book-pages-right"></div>
@@ -956,18 +1298,18 @@ footer {
       <div class="book-click-hint">Click to flip</div>
     </div>
   </div>
-  <a href="https://buy.stripe.com/bJe4gz20yfJH5WR9pU4ZG0a" class="cta-btn">Get Your Copy</a>
-  <br><span class="cta-price">Digital download &middot; Instant access</span>
+  <a href="https://buy.stripe.com/bJe4gz20yfJH5WR9pU4ZG0a" class="cta-btn">Get the Book</a>
+  <br><span class="cta-price">Digital edition &middot; Instant download</span>
 </section>
 
 <footer>
   <div class="footer-links">
     <a href="about.html">About</a>
     <a href="blog.html">Blog</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Service</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
   </div>
-  <div class="footer-logo">The Coordinator</div>
+  <div class="footer-logo"><span class="section-mark">§</span>The Coordinator</div>
   <div class="footer-copy">&copy; 2026 Ish M.A. All rights reserved.</div>
 </footer>
 
